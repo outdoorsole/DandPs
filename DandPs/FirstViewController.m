@@ -8,12 +8,13 @@
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "BorderedLabel.h"
 
 @interface FirstViewController () <CanReceiveSpellDelegate>
 
 @property int viewCount;
 @property (weak, nonatomic) IBOutlet UILabel *vcNumberLabel;
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet BorderedLabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UILabel *viewCountNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *spellNameLabel;
@@ -33,6 +34,13 @@
     // Set up buttons
     self.changeBackgroundButton.layer.cornerRadius = 16;
     self.goToVCButton.layer.cornerRadius = 16;
+    
+    self.statusLabel.layer.borderColor = [UIColor redColor].CGColor;
+    self.statusLabel.layer.borderWidth = 1;
+    self.statusLabel.topInset = 5;
+    self.statusLabel.bottomInset = 5;
+    self.statusLabel.rightInset = 5;
+    self.statusLabel.leftInset = 5;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

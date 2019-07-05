@@ -7,11 +7,12 @@
 //
 
 #import "SecondViewController.h"
+#import "BorderedLabel.h"
 
 @interface SecondViewController ()
 @property int viewCount;   // Will keep our count for times this VC has been displayed
 
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet BorderedLabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UILabel *viewCountNumLabel;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -29,6 +30,13 @@
     // Set up buttons
     self.changeBackgroundButton.layer.cornerRadius = 16;
     self.goToVCButton.layer.cornerRadius = 16;
+    
+    self.statusLabel.layer.borderColor = [UIColor redColor].CGColor;
+    self.statusLabel.layer.borderWidth = 1;
+    self.statusLabel.topInset = 5;
+    self.statusLabel.bottomInset = 5;
+    self.statusLabel.rightInset = 5;
+    self.statusLabel.leftInset = 5;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -36,8 +44,8 @@
         self.statusLabel.text = @"I am a brand new VC!";
     } else {
         self.statusLabel.text = @"I have been seen before";
-        self.viewCount += 1;
     }
+        self.viewCount += 1;
     self.viewCountNumLabel.text = [NSString stringWithFormat:@"%d", self.viewCount];
 }
 

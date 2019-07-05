@@ -16,6 +16,7 @@
 		16181BAC22CEE26E00A88689 /* DandPsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16181BAB22CEE26E00A88689 /* DandPsUITests.m */; };
 		16181BBB22CEECCC00A88689 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16181BBA22CEECCC00A88689 /* FirstViewController.m */; };
 		16181BBE22CEECD200A88689 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16181BBD22CEECD200A88689 /* SecondViewController.m */; };
+		16FAED6522CFE8F6001BB631 /* BorderedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FAED6422CFE8F6001BB631 /* BorderedLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		16181BBA22CEECCC00A88689 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		16181BBC22CEECD200A88689 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		16181BBD22CEECD200A88689 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		16FAED6322CFE8F6001BB631 /* BorderedLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BorderedLabel.h; sourceTree = "<group>"; };
+		16FAED6422CFE8F6001BB631 /* BorderedLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BorderedLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		16181B8622CEE26C00A88689 /* DandPs */ = {
 			isa = PBXGroup;
 			children = (
+				16FAED6222CFE8DA001BB631 /* Custom */,
 				16181B8722CEE26C00A88689 /* AppDelegate.h */,
 				16181B8822CEE26C00A88689 /* AppDelegate.m */,
 				16181B8D22CEE26C00A88689 /* Main.storyboard */,
@@ -135,6 +139,15 @@
 				16181BAD22CEE26E00A88689 /* Info.plist */,
 			);
 			path = DandPsUITests;
+			sourceTree = "<group>";
+		};
+		16FAED6222CFE8DA001BB631 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				16FAED6322CFE8F6001BB631 /* BorderedLabel.h */,
+				16FAED6422CFE8F6001BB631 /* BorderedLabel.m */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +282,7 @@
 			files = (
 				16181BBE22CEECD200A88689 /* SecondViewController.m in Sources */,
 				16181B9722CEE26E00A88689 /* main.m in Sources */,
+				16FAED6522CFE8F6001BB631 /* BorderedLabel.m in Sources */,
 				16181B8922CEE26C00A88689 /* AppDelegate.m in Sources */,
 				16181BBB22CEECCC00A88689 /* FirstViewController.m in Sources */,
 			);
