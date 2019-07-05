@@ -42,7 +42,9 @@
 
 // Change background color and labels for this VC
 - (IBAction)changeBackgroundPressed:(UIButton *)sender {
-    self.view.backgroundColor = [UIColor purpleColor];
+    UIColor *newColor = [UIColor colorWithRed:0.87 green:0.66 blue:0.96 alpha:1.0];;
+    
+    self.view.backgroundColor = newColor;
     self.statusLabel.textColor = [UIColor whiteColor];
     self.countLabel.textColor = [UIColor whiteColor];
     self.viewCountNumLabel.textColor = [UIColor whiteColor];

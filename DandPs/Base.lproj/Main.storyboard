@@ -34,25 +34,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15a-xR-9rl">
-                                <rect key="frame" x="191.5" y="100" width="88.5" height="34.5"/>
+                                <rect key="frame" x="191.5" y="120" width="88.5" height="34.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VC status" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6s-a9-YT0">
-                                <rect key="frame" x="15" y="100" width="87" height="23"/>
+                                <rect key="frame" x="15" y="120" width="87" height="23"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ak-gD-FuW">
-                                <rect key="frame" x="288" y="100" width="17" height="34.5"/>
+                                <rect key="frame" x="288" y="120" width="17" height="34.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VC Number 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ7-tX-m1w">
-                                <rect key="frame" x="81" y="30" width="158" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VC Number 1 Employee (delegate)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ7-tX-m1w">
+                                <rect key="frame" x="40" y="30" width="240" height="60"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
                                 <color key="textColor" red="0.67172551155090332" green="0.82329332828521729" blue="0.98011988401412964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -84,7 +84,7 @@
                             <constraint firstItem="aQ7-tX-m1w" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="dXI-vk-pGa"/>
                             <constraint firstItem="GdP-75-KwR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jp5-Pc-Usu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8ak-gD-FuW" secondAttribute="trailing" constant="15" id="riU-Ol-ZNP"/>
-                            <constraint firstItem="i6s-a9-YT0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="suO-99-koG"/>
+                            <constraint firstItem="i6s-a9-YT0" firstAttribute="top" secondItem="aQ7-tX-m1w" secondAttribute="bottom" constant="30" id="wxM-gy-Y1N"/>
                             <constraint firstItem="SKY-P3-9Kl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="xFj-nQ-6h5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -111,39 +111,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yv8-hV-L5u">
-                                <rect key="frame" x="191.5" y="100" width="88.5" height="34.5"/>
+                                <rect key="frame" x="191.5" y="120" width="88.5" height="34.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlR-EW-1Mv">
-                                <rect key="frame" x="288" y="100" width="17" height="34.5"/>
+                                <rect key="frame" x="288" y="120" width="17" height="34.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VC status" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3C-IQ-IHM">
-                                <rect key="frame" x="13" y="100" width="87" height="23"/>
+                                <rect key="frame" x="13" y="120" width="87" height="23"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VC Number 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l51-Mo-BWB">
-                                <rect key="frame" x="81" y="30" width="158" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VC Number 2 Boss" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l51-Mo-BWB">
+                                <rect key="frame" x="81.5" y="30" width="157.5" height="60"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0W-MS-cH2">
                                 <rect key="frame" x="85" y="254" width="150" height="60"/>
-                                <color key="backgroundColor" red="0.88923990726470947" green="0.52942794561386108" blue="0.61951553821563721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="GkP-9B-sdf"/>
                                     <constraint firstAttribute="width" constant="150" id="kpy-Sl-M0q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
                                 <state key="normal" title="Go To VC 1">
-                                    <color key="titleColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="kbs-9o-Gxz"/>
@@ -151,22 +151,23 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnL-b9-aXZ">
                                 <rect key="frame" x="15" y="498" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.88923990726470947" green="0.52942794561386108" blue="0.61951553821563721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="jh6-Nq-HXw"/>
                                     <constraint firstAttribute="height" constant="50" id="q9C-7x-mfS"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" title="Change Background" image="paint-bucket-gray"/>
+                                <state key="normal" title="Change Background" image="paint-bucket-dark-gray"/>
                                 <connections>
                                     <action selector="changeBackgroundPressed:" destination="Xsh-bK-y7U" eventType="touchUpInside" id="43r-BS-f96"/>
                                     <action selector="changeBackgroundPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o0j-dy-D5m"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.99532622098922729" green="0.75297373533248901" blue="0.80773460865020752" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.39208358526229858" green="0.2270391583442688" blue="0.44294381141662598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h0W-MS-cH2" firstAttribute="centerY" secondItem="Gdw-69-o4I" secondAttribute="centerY" id="6sV-Pl-bK8"/>
+                            <constraint firstItem="a3C-IQ-IHM" firstAttribute="top" secondItem="l51-Mo-BWB" secondAttribute="bottom" constant="30" id="F79-Cf-9hb"/>
                             <constraint firstItem="WnL-b9-aXZ" firstAttribute="leading" secondItem="Gdw-69-o4I" secondAttribute="leading" constant="15" id="FsL-ca-nsi"/>
                             <constraint firstItem="UlR-EW-1Mv" firstAttribute="top" secondItem="Yv8-hV-L5u" secondAttribute="top" id="JnX-3v-MJK"/>
                             <constraint firstItem="Yv8-hV-L5u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a3C-IQ-IHM" secondAttribute="trailing" constant="20" id="Mns-Rf-ZP9"/>
@@ -178,7 +179,6 @@
                             <constraint firstItem="a3C-IQ-IHM" firstAttribute="leading" secondItem="Gdw-69-o4I" secondAttribute="leading" constant="13" id="iRi-dg-pUM"/>
                             <constraint firstItem="l51-Mo-BWB" firstAttribute="centerX" secondItem="Gdw-69-o4I" secondAttribute="centerX" id="sCx-xa-dP0"/>
                             <constraint firstItem="Yv8-hV-L5u" firstAttribute="top" secondItem="a3C-IQ-IHM" secondAttribute="top" id="sca-Zi-MoA"/>
-                            <constraint firstItem="a3C-IQ-IHM" firstAttribute="top" secondItem="Gdw-69-o4I" secondAttribute="top" constant="100" id="zz0-yk-NGV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oKc-0F-AU5"/>
                     </view>
@@ -196,7 +196,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="paint-bucket-gray" width="240" height="240"/>
+        <image name="paint-bucket-dark-gray" width="240" height="240"/>
         <image name="paint-bucket-light-blue" width="120" height="120"/>
     </resources>
 </document>
