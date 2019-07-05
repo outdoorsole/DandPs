@@ -11,10 +11,10 @@
 @interface SecondViewController ()
 
 @property int viewCount;   // Will keep our count for times this VC has been displayed
+
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UILabel *viewCountNumLabel;
-
 @end
 
 @implementation SecondViewController
@@ -24,6 +24,10 @@
     // Do any additional setup after loading the view.
     self.viewCount = 0;
     self.viewCountNumLabel.text = [NSString stringWithFormat:@"%d", self.viewCount];
+    
+    // Set up buttons
+    self.changeBackgroundButton.layer.cornerRadius = 16;
+    self.goToVCButton.layer.cornerRadius = 16;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

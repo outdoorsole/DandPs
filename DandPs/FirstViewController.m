@@ -11,6 +11,7 @@
 @interface FirstViewController ()
 
 @property int viewCount;
+@property (weak, nonatomic) IBOutlet UILabel *vcNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UILabel *viewCountNumLabel;
@@ -24,6 +25,10 @@
     // Do any additional setup after loading the view.
     self.viewCount = 0;
     self.viewCountNumLabel.text = [NSString stringWithFormat:@"%d", self.viewCount];
+
+    // Set up buttons
+    self.changeBackgroundButton.layer.cornerRadius = 16;
+    self.goToVCButton.layer.cornerRadius = 16;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -38,7 +43,8 @@
 
 // Change background color and labels for this VC
 - (IBAction)changeBackgroundPressed:(UIButton *)sender {
-    self.view.backgroundColor = [UIColor greenColor];
+    self.view.backgroundColor = [UIColor colorWithRed:0.67 green:0.82 blue:0.98 alpha:1.0];
+    self.vcNumberLabel.textColor =  [UIColor blackColor];
     self.statusLabel.textColor = [UIColor blackColor];
     self.countLabel.textColor = [UIColor blackColor];
     self.viewCountNumLabel.textColor = [UIColor blackColor];
