@@ -10,6 +10,11 @@
 
 @interface SecondViewController ()
 
+@property int viewCount;   // Will keep our count for times this VC has been displayed
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@property (weak, nonatomic) IBOutlet UILabel *viewCountNumLabel;
+
 @end
 
 @implementation SecondViewController
@@ -17,8 +22,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.viewCount = 0;
+    self.viewCountNumLabel.text = [NSString stringWithFormat:@"%d", self.viewCount];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    if (self.viewCount < 1) {
+        self.statusLabel.text = @"I am a brand new VC!";
+    } else {
+        self.statusLabel.text = @"I have been seen before";
+        self.viewCount += 1;
+    }
+    self.viewCountNumLabel.text = [NSString stringWithFormat:@"%d", self.viewCount];
+}
+
+// Change background color and labels for this VC
+- (IBAction)changeBackgroundPressed:(UIButton *)sender {
+    self.view.backgroundColor = [UIColor purpleColor];
+    self.statusLabel.textColor = [UIColor whiteColor];
+    self.countLabel.textColor = [UIColor whiteColor];
+    self.viewCountNumLabel.textColor = [UIColor whiteColor];
+}
 /*
 #pragma mark - Navigation
 
