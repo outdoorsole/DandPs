@@ -7,14 +7,16 @@
 //
 
 #import "FirstViewController.h"
+#import "SecondViewController.h"
 
-@interface FirstViewController ()
+@interface FirstViewController () <CanReceiveSpellDelegate>
 
 @property int viewCount;
 @property (weak, nonatomic) IBOutlet UILabel *vcNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UILabel *viewCountNumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *spellNameLabel;
 
 @end
 
@@ -25,6 +27,8 @@
     // Do any additional setup after loading the view.
     self.viewCount = 0;
     self.viewCountNumLabel.text = [NSString stringWithFormat:@"%d", self.viewCount];
+    
+    NSLog(@"Call view did load");
 
     // Set up buttons
     self.changeBackgroundButton.layer.cornerRadius = 16;
@@ -32,12 +36,14 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"Call view will appear");
+    NSLog(@"%d", self.viewCount);
     if (self.viewCount < 1) {
         self.statusLabel.text = @"I am a brand new VC!";
     } else {
         self.statusLabel.text = @"I have been seen before";
-            self.viewCount += 1;
     }
+    self.viewCount += 1;
     self.viewCountNumLabel.text = [NSString stringWithFormat:@"%d", self.viewCount];
 }
 
@@ -48,7 +54,10 @@
     self.statusLabel.textColor = [UIColor blackColor];
     self.countLabel.textColor = [UIColor blackColor];
     self.viewCountNumLabel.textColor = [UIColor blackColor];
+    self.spellNameLabel.textColor = [UIColor blackColor];
 }
+
+
 
 #pragma mark - Navigation
 
@@ -56,6 +65,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    SecondViewController *secondViewController = [segue destinationViewController];
+    // do the setup to make ourselves available for messages
+    secondViewController.delegate = self;
+}
+
+- (void)receiveASpell:(NSString *)spell {
+    self.spellNameLabel.text = spell;
 }
 
 @end

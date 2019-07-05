@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// Implement the protocol
+// List of the function names
+@protocol CanReceiveSpellDelegate
+- (void)receiveASpell:(NSString *)spell;
+@end
+
 @interface SecondViewController : UIViewController
+// Create property for the delegate
+@property (nonatomic, weak) id<CanReceiveSpellDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIButton *changeBackgroundButton;
 @property (weak, nonatomic) IBOutlet UIButton *goToVCButton;

@@ -57,6 +57,12 @@
                                 <color key="textColor" red="0.67172551155090332" green="0.82329332828521729" blue="0.98011988401412964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky4-ND-yIP">
+                                <rect key="frame" x="123" y="211" width="74" height="35"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKY-P3-9Kl">
                                 <rect key="frame" x="15" y="498" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.24065032601356506" green="0.3171699047088623" blue="0.5487748384475708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -77,8 +83,10 @@
                             <constraint firstItem="8ak-gD-FuW" firstAttribute="leading" secondItem="15a-xR-9rl" secondAttribute="trailing" constant="8" id="10D-vD-p2U"/>
                             <constraint firstAttribute="bottom" secondItem="SKY-P3-9Kl" secondAttribute="bottom" constant="20" id="DaM-FU-JjL"/>
                             <constraint firstItem="15a-xR-9rl" firstAttribute="top" secondItem="i6s-a9-YT0" secondAttribute="top" id="Grq-6Q-23f"/>
+                            <constraint firstItem="ky4-ND-yIP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JyW-Pa-paL"/>
                             <constraint firstItem="GdP-75-KwR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KPP-0D-gSh"/>
                             <constraint firstItem="15a-xR-9rl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i6s-a9-YT0" secondAttribute="trailing" constant="20" id="TIh-ej-b1n"/>
+                            <constraint firstItem="GdP-75-KwR" firstAttribute="top" secondItem="ky4-ND-yIP" secondAttribute="bottom" constant="8" id="UgP-SL-HQL"/>
                             <constraint firstItem="aQ7-tX-m1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wyy-xh-jqz"/>
                             <constraint firstItem="8ak-gD-FuW" firstAttribute="top" secondItem="15a-xR-9rl" secondAttribute="top" id="d3h-LW-HbQ"/>
                             <constraint firstItem="aQ7-tX-m1w" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="dXI-vk-pGa"/>
@@ -93,6 +101,7 @@
                         <outlet property="changeBackgroundButton" destination="SKY-P3-9Kl" id="5ac-UN-y0g"/>
                         <outlet property="countLabel" destination="15a-xR-9rl" id="ogI-ba-MLy"/>
                         <outlet property="goToVCButton" destination="GdP-75-KwR" id="bKp-1d-vD2"/>
+                        <outlet property="spellNameLabel" destination="ky4-ND-yIP" id="axQ-Xk-8LG"/>
                         <outlet property="statusLabel" destination="i6s-a9-YT0" id="rhf-yf-czB"/>
                         <outlet property="vcNumberLabel" destination="aQ7-tX-m1w" id="adx-fs-5Nd"/>
                         <outlet property="viewCountNumLabel" destination="8ak-gD-FuW" id="qJr-W5-H6S"/>
@@ -146,7 +155,7 @@
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="kbs-9o-Gxz"/>
+                                    <action selector="goButtonTapped:" destination="Xsh-bK-y7U" eventType="touchUpInside" id="Ioj-Rl-uA8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnL-b9-aXZ">
@@ -163,6 +172,13 @@
                                     <action selector="changeBackgroundPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o0j-dy-D5m"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RG7-Ng-hdh">
+                                <rect key="frame" x="112" y="192" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.39208358526229858" green="0.2270391583442688" blue="0.44294381141662598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -187,6 +203,7 @@
                         <outlet property="countLabel" destination="Yv8-hV-L5u" id="nlj-gb-ALv"/>
                         <outlet property="goToVCButton" destination="h0W-MS-cH2" id="KAn-mY-2ZZ"/>
                         <outlet property="statusLabel" destination="a3C-IQ-IHM" id="dLT-Un-Yua"/>
+                        <outlet property="textField" destination="RG7-Ng-hdh" id="OWD-Qt-DDl"/>
                         <outlet property="viewCountNumLabel" destination="UlR-EW-1Mv" id="Pfm-G0-EqH"/>
                     </connections>
                 </viewController>

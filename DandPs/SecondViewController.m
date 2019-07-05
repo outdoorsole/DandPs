@@ -9,12 +9,13 @@
 #import "SecondViewController.h"
 
 @interface SecondViewController ()
-
 @property int viewCount;   // Will keep our count for times this VC has been displayed
 
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UILabel *viewCountNumLabel;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 @end
 
 @implementation SecondViewController
@@ -49,6 +50,14 @@
     self.countLabel.textColor = [UIColor whiteColor];
     self.viewCountNumLabel.textColor = [UIColor whiteColor];
 }
+
+- (IBAction)goButtonTapped:(UIButton *)sender {
+    [self.delegate receiveASpell:@"Oblivate!"];
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 
