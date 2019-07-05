@@ -60,7 +60,7 @@
 }
 
 - (IBAction)goButtonTapped:(UIButton *)sender {
-    [self.delegate receiveASpell:@"Oblivate!"];
+    [self.delegate receiveASpell:self.textField.text];
     
     
     [self dismissViewControllerAnimated:YES completion:nil];
