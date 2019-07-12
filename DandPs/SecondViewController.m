@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.viewCount = 0;
+    self.viewCount = 1;
     self.viewCountNumLabel.text = [NSString stringWithFormat:@"%d", self.viewCount];
     
     // Set up buttons
@@ -31,7 +31,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    if (self.viewCount < 1) {
+    if (self.viewCount <= 1) {
         self.statusLabel.text = @"I am a brand new VC!";
     } else {
         self.statusLabel.text = @"I have been seen before";
